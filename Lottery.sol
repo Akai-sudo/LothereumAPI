@@ -125,11 +125,11 @@ contract Lottery is usingProvable {
         return (seed - ((seed / 1000) * 1000));
     }
 
-    function randGen(uint _modulus) internal returns(uint)
+    /*function randGen(uint _modulus) internal returns(uint)
     {
         randNonce++;
         return uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % _modulus;
-    }
+    }*/
 	
 	function __callback(bytes32 myid, string res) public {
         if (msg.sender != provable_cbAddress()) revert(); //bil je throw pa je deprecated
