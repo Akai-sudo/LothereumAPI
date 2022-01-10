@@ -13,7 +13,7 @@ contract NewLottery {
     enum State { BettingPhase, Win, Loss } //bo vrednosti 0, 1 ali 2
     State public state;
 
-    constructor() public {
+    constructor() public payable {
         better = msg.sender;
         state = State.BettingPhase;  
     }
